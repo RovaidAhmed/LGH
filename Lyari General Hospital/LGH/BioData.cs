@@ -10,22 +10,16 @@ using System.Windows.Forms;
 
 namespace LGH
 {
-    public partial class MainForm : Form
+    public partial class BioData : Form
     {
-        public MainForm()
+        public BioData()
         {
             InitializeComponent();
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void comboboxsex_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void bioDataToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            BioData bd = new BioData();
-            bd.ShowDialog();
+            comboboxsex.Items.Add("Male");
         }
     }
 }

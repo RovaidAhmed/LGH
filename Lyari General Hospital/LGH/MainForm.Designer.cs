@@ -63,6 +63,7 @@
             this.bioDataToolStripMenuItem.Name = "bioDataToolStripMenuItem";
             this.bioDataToolStripMenuItem.Size = new System.Drawing.Size(128, 22);
             this.bioDataToolStripMenuItem.Text = "Bio-Data";
+            this.bioDataToolStripMenuItem.Click += new System.EventHandler(this.bioDataToolStripMenuItem_Click);
             // 
             // searchToolStripMenuItem
             // 
@@ -84,7 +85,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Adobe Fan Heiti Std B", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(524, 65);
+            this.label1.Location = new System.Drawing.Point(524, 61);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(393, 30);
             this.label1.TabIndex = 1;
@@ -92,14 +93,14 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::LGH.Properties.Resources._939b9283ce9bdbd206d8edc169cc4f4a;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(1067, 519);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
-            this.Font = new System.Drawing.Font("Adobe Gothic Std B", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainForm";

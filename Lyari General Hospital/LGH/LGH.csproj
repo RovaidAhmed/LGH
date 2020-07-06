@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BioData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BioData.Designer.cs">
+      <DependentUpon>BioData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dataclass.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BioData.resx">
+      <DependentUpon>BioData.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
     </EmbeddedResource>
