@@ -21,5 +21,16 @@ namespace LGH
         {
             comboboxsex.Items.Add("Male");
         }
+
+        private void BioData_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Other_Info_Biodata oib = new Other_Info_Biodata();
+            oib.ShowDialog();
+        }
     }
 }

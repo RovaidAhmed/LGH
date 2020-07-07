@@ -42,11 +42,11 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Modern No. 20", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(104, 18);
+            this.label1.Location = new System.Drawing.Point(68, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 29);
+            this.label1.Size = new System.Drawing.Size(386, 29);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Lyari General Hospital";
+            this.label1.Text = " Sindh Lyari General Hospital";
             // 
             // label2
             // 
@@ -79,7 +79,6 @@
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(182, 22);
             this.txtname.TabIndex = 3;
-         
             // 
             // txtpass
             // 
