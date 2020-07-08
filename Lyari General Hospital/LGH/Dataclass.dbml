@@ -6,7 +6,7 @@
       <Column Name="Name" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="SDW_O" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="DOB" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
-      <Column Name="Date_of_Superannuation" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Date_of_Superannuation" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
       <Column Name="Sex" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Martial_Status" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Next_Of_Kin" Type="System.String" DbType="NChar(100) NOT NULL" CanBeNull="false" />
@@ -22,10 +22,12 @@
       <Column Name="Personal_No" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Service_Book_No" Type="System.String" DbType="NVarChar(70)" CanBeNull="true" />
       <Column Name="Date_Of_Joinning" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Joinning_at_LGHK" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Joinning_at_LGHK" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Joinning_at_LGHK_no" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Posted_at_LGHK_On" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="Status_Before_Joinning_LGHK" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="Posted_at_LGHK_In" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Posted_at_LGHK_In" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="lghk_vacantpost" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Designation" Type="System.String" DbType="NVarChar(80) NOT NULL" CanBeNull="false" />
       <Column Name="Cadre" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="BPS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />

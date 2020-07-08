@@ -19,5 +19,5 @@ D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csproj.CoreCompileInputs
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.exe
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.pdb
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.BioData.resources
-D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csprojAssemblyReference.cache
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.Other_Info_Biodata.resources
+D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csprojAssemblyReference.cache

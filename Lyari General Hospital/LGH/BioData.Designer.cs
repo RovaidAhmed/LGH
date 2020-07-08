@@ -38,7 +38,6 @@
             this.lbldob = new System.Windows.Forms.Label();
             this.dateTimePickerDOB = new System.Windows.Forms.DateTimePicker();
             this.lbldateofsuperannuation = new System.Windows.Forms.Label();
-            this.txtsuperannuation = new System.Windows.Forms.TextBox();
             this.lblsex = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.comboboxsex = new System.Windows.Forms.ComboBox();
@@ -47,7 +46,7 @@
             this.lblnextkin = new System.Windows.Forms.Label();
             this.txtnextkin = new System.Windows.Forms.TextBox();
             this.lblcnic = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtcnic = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtcellno = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@
             this.label23 = new System.Windows.Forms.Label();
             this.txtbps = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.dateTimePickerdatesupernnuation = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -176,14 +176,6 @@
             this.lbldateofsuperannuation.TabIndex = 8;
             this.lbldateofsuperannuation.Text = "Date of Superannuation";
             // 
-            // txtsuperannuation
-            // 
-            this.txtsuperannuation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtsuperannuation.Location = new System.Drawing.Point(204, 144);
-            this.txtsuperannuation.Name = "txtsuperannuation";
-            this.txtsuperannuation.Size = new System.Drawing.Size(234, 22);
-            this.txtsuperannuation.TabIndex = 9;
-            // 
             // lblsex
             // 
             this.lblsex.AutoSize = true;
@@ -206,7 +198,6 @@
             this.comboboxsex.Name = "comboboxsex";
             this.comboboxsex.Size = new System.Drawing.Size(106, 24);
             this.comboboxsex.TabIndex = 11;
-            this.comboboxsex.SelectedIndexChanged += new System.EventHandler(this.comboboxsex_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -260,13 +251,13 @@
             this.lblcnic.TabIndex = 16;
             this.lblcnic.Text = "Cnic#";
             // 
-            // textBox1
+            // txtcnic
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(439, 184);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 22);
-            this.textBox1.TabIndex = 17;
+            this.txtcnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcnic.Location = new System.Drawing.Point(439, 184);
+            this.txtcnic.Name = "txtcnic";
+            this.txtcnic.Size = new System.Drawing.Size(259, 22);
+            this.txtcnic.TabIndex = 17;
             // 
             // label4
             // 
@@ -662,12 +653,20 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // dateTimePickerdatesupernnuation
+            // 
+            this.dateTimePickerdatesupernnuation.Location = new System.Drawing.Point(204, 141);
+            this.dateTimePickerdatesupernnuation.Name = "dateTimePickerdatesupernnuation";
+            this.dateTimePickerdatesupernnuation.Size = new System.Drawing.Size(190, 20);
+            this.dateTimePickerdatesupernnuation.TabIndex = 62;
+            // 
             // BioData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(975, 749);
+            this.Controls.Add(this.dateTimePickerdatesupernnuation);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtbps);
             this.Controls.Add(this.label23);
@@ -709,7 +708,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtcellno);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtcnic);
             this.Controls.Add(this.lblcnic);
             this.Controls.Add(this.txtnextkin);
             this.Controls.Add(this.lblnextkin);
@@ -717,7 +716,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.comboboxsex);
             this.Controls.Add(this.lblsex);
-            this.Controls.Add(this.txtsuperannuation);
             this.Controls.Add(this.lbldateofsuperannuation);
             this.Controls.Add(this.dateTimePickerDOB);
             this.Controls.Add(this.lbldob);
@@ -729,7 +727,6 @@
             this.Controls.Add(this.label1);
             this.Name = "BioData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "BioData";
             this.Load += new System.EventHandler(this.BioData_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -747,7 +744,6 @@
         private System.Windows.Forms.Label lbldob;
         private System.Windows.Forms.DateTimePicker dateTimePickerDOB;
         private System.Windows.Forms.Label lbldateofsuperannuation;
-        private System.Windows.Forms.TextBox txtsuperannuation;
         private System.Windows.Forms.Label lblsex;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.ComboBox comboboxsex;
@@ -756,7 +752,7 @@
         private System.Windows.Forms.Label lblnextkin;
         private System.Windows.Forms.TextBox txtnextkin;
         private System.Windows.Forms.Label lblcnic;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtcnic;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtcellno;
         private System.Windows.Forms.Label label5;
@@ -799,5 +795,6 @@
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox txtbps;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DateTimePicker dateTimePickerdatesupernnuation;
     }
 }

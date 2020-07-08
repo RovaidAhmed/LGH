@@ -99,7 +99,7 @@ namespace LGH
 		
 		private System.DateTime _DOB;
 		
-		private string _Date_of_Superannuation;
+		private System.DateTime _Date_of_Superannuation;
 		
 		private string _Sex;
 		
@@ -131,13 +131,17 @@ namespace LGH
 		
 		private System.DateTime _Date_Of_Joinning;
 		
-		private string _Joinning_at_LGHK;
+		private System.DateTime _Joinning_at_LGHK;
+		
+		private int _Joinning_at_LGHK_no;
 		
 		private string _Posted_at_LGHK_On;
 		
 		private string _Status_Before_Joinning_LGHK;
 		
 		private string _Posted_at_LGHK_In;
+		
+		private string _lghk_vacantpost;
 		
 		private string _Designation;
 		
@@ -179,7 +183,7 @@ namespace LGH
     partial void OnSDW_OChanged();
     partial void OnDOBChanging(System.DateTime value);
     partial void OnDOBChanged();
-    partial void OnDate_of_SuperannuationChanging(string value);
+    partial void OnDate_of_SuperannuationChanging(System.DateTime value);
     partial void OnDate_of_SuperannuationChanged();
     partial void OnSexChanging(string value);
     partial void OnSexChanged();
@@ -211,14 +215,18 @@ namespace LGH
     partial void OnService_Book_NoChanged();
     partial void OnDate_Of_JoinningChanging(System.DateTime value);
     partial void OnDate_Of_JoinningChanged();
-    partial void OnJoinning_at_LGHKChanging(string value);
+    partial void OnJoinning_at_LGHKChanging(System.DateTime value);
     partial void OnJoinning_at_LGHKChanged();
+    partial void OnJoinning_at_LGHK_noChanging(int value);
+    partial void OnJoinning_at_LGHK_noChanged();
     partial void OnPosted_at_LGHK_OnChanging(string value);
     partial void OnPosted_at_LGHK_OnChanged();
     partial void OnStatus_Before_Joinning_LGHKChanging(string value);
     partial void OnStatus_Before_Joinning_LGHKChanged();
     partial void OnPosted_at_LGHK_InChanging(string value);
     partial void OnPosted_at_LGHK_InChanged();
+    partial void Onlghk_vacantpostChanging(string value);
+    partial void Onlghk_vacantpostChanged();
     partial void OnDesignationChanging(string value);
     partial void OnDesignationChanged();
     partial void OnCadreChanging(string value);
@@ -334,8 +342,8 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_of_Superannuation", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Date_of_Superannuation
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Date_of_Superannuation", DbType="Date NOT NULL")]
+		public System.DateTime Date_of_Superannuation
 		{
 			get
 			{
@@ -654,8 +662,8 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Joinning_at_LGHK", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string Joinning_at_LGHK
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Joinning_at_LGHK", DbType="DateTime NOT NULL")]
+		public System.DateTime Joinning_at_LGHK
 		{
 			get
 			{
@@ -670,6 +678,26 @@ namespace LGH
 					this._Joinning_at_LGHK = value;
 					this.SendPropertyChanged("Joinning_at_LGHK");
 					this.OnJoinning_at_LGHKChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Joinning_at_LGHK_no", DbType="Int NOT NULL")]
+		public int Joinning_at_LGHK_no
+		{
+			get
+			{
+				return this._Joinning_at_LGHK_no;
+			}
+			set
+			{
+				if ((this._Joinning_at_LGHK_no != value))
+				{
+					this.OnJoinning_at_LGHK_noChanging(value);
+					this.SendPropertyChanging();
+					this._Joinning_at_LGHK_no = value;
+					this.SendPropertyChanged("Joinning_at_LGHK_no");
+					this.OnJoinning_at_LGHK_noChanged();
 				}
 			}
 		}
@@ -714,7 +742,7 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Posted_at_LGHK_In", DbType="NVarChar(MAX) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Posted_at_LGHK_In", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
 		public string Posted_at_LGHK_In
 		{
 			get
@@ -730,6 +758,26 @@ namespace LGH
 					this._Posted_at_LGHK_In = value;
 					this.SendPropertyChanged("Posted_at_LGHK_In");
 					this.OnPosted_at_LGHK_InChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_lghk_vacantpost", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string lghk_vacantpost
+		{
+			get
+			{
+				return this._lghk_vacantpost;
+			}
+			set
+			{
+				if ((this._lghk_vacantpost != value))
+				{
+					this.Onlghk_vacantpostChanging(value);
+					this.SendPropertyChanging();
+					this._lghk_vacantpost = value;
+					this.SendPropertyChanged("lghk_vacantpost");
+					this.Onlghk_vacantpostChanged();
 				}
 			}
 		}

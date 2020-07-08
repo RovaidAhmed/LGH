@@ -224,6 +224,7 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Add";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Other_Info_Biodata
             // 
@@ -252,7 +253,9 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Other_Info_Biodata";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Other_Info_Biodata";
+            this.Load += new System.EventHandler(this.Other_Info_Biodata_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
