@@ -85,7 +85,7 @@ namespace LGH
             vlghkvacantpost = txtvacantpost.Text;
             vdesignation = txtdesignation.Text;
             vcadre = comboBoxcadre.Text;
-            vbps = txtbps.Text;
+            vbps = numericUpDownbps.Value.ToString();
 
 
             //open another bio data form

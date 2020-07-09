@@ -87,9 +87,10 @@
             this.label22 = new System.Windows.Forms.Label();
             this.comboBoxcadre = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.txtbps = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePickerdatesupernnuation = new System.Windows.Forms.DateTimePicker();
+            this.numericUpDownbps = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownbps)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -635,14 +636,6 @@
             this.label23.TabIndex = 58;
             this.label23.Text = "BPS";
             // 
-            // txtbps
-            // 
-            this.txtbps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtbps.Location = new System.Drawing.Point(813, 444);
-            this.txtbps.Name = "txtbps";
-            this.txtbps.Size = new System.Drawing.Size(72, 22);
-            this.txtbps.TabIndex = 59;
-            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(773, 616);
@@ -660,15 +653,22 @@
             this.dateTimePickerdatesupernnuation.Size = new System.Drawing.Size(190, 20);
             this.dateTimePickerdatesupernnuation.TabIndex = 62;
             // 
+            // numericUpDownbps
+            // 
+            this.numericUpDownbps.Location = new System.Drawing.Point(813, 443);
+            this.numericUpDownbps.Name = "numericUpDownbps";
+            this.numericUpDownbps.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDownbps.TabIndex = 63;
+            // 
             // BioData
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(975, 749);
+            this.Controls.Add(this.numericUpDownbps);
             this.Controls.Add(this.dateTimePickerdatesupernnuation);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtbps);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.comboBoxcadre);
             this.Controls.Add(this.label22);
@@ -728,6 +728,7 @@
             this.Name = "BioData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.BioData_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownbps)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -793,8 +794,8 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox comboBoxcadre;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.TextBox txtbps;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePickerdatesupernnuation;
+        private System.Windows.Forms.NumericUpDown numericUpDownbps;
     }
 }

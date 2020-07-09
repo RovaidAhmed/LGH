@@ -38,9 +38,9 @@
       <Column Name="Any_Other_Qualification" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Column Name="Last_Institute" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
       <Column Name="Date_Last_Promotion" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="Promoted_BPS" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Promoted_BPS" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="DOL_Ex_Pak_Leave" Type="System.DateTime" DbType="Date" CanBeNull="true" />
-      <Column Name="Dated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Dated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>

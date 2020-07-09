@@ -163,11 +163,11 @@ namespace LGH
 		
 		private System.DateTime _Date_Last_Promotion;
 		
-		private int _Promoted_BPS;
+		private System.Nullable<int> _Promoted_BPS;
 		
 		private System.Nullable<System.DateTime> _DOL_Ex_Pak_Leave;
 		
-		private System.DateTime _Dated;
+		private System.Nullable<System.DateTime> _Dated;
 		
 		private string _Remarks;
 		
@@ -247,11 +247,11 @@ namespace LGH
     partial void OnLast_InstituteChanged();
     partial void OnDate_Last_PromotionChanging(System.DateTime value);
     partial void OnDate_Last_PromotionChanged();
-    partial void OnPromoted_BPSChanging(int value);
+    partial void OnPromoted_BPSChanging(System.Nullable<int> value);
     partial void OnPromoted_BPSChanged();
     partial void OnDOL_Ex_Pak_LeaveChanging(System.Nullable<System.DateTime> value);
     partial void OnDOL_Ex_Pak_LeaveChanged();
-    partial void OnDatedChanging(System.DateTime value);
+    partial void OnDatedChanging(System.Nullable<System.DateTime> value);
     partial void OnDatedChanged();
     partial void OnRemarksChanging(string value);
     partial void OnRemarksChanged();
@@ -982,8 +982,8 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Promoted_BPS", DbType="Int NOT NULL")]
-		public int Promoted_BPS
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Promoted_BPS", DbType="Int")]
+		public System.Nullable<int> Promoted_BPS
 		{
 			get
 			{
@@ -1022,8 +1022,8 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dated", DbType="DateTime NOT NULL")]
-		public System.DateTime Dated
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Dated", DbType="DateTime")]
+		public System.Nullable<System.DateTime> Dated
 		{
 			get
 			{

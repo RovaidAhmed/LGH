@@ -41,11 +41,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtlastinstitute = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerlastpromotion = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePickerpakleave = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.richTextBoxremarks = new System.Windows.Forms.RichTextBox();
+            this.txtremarks = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -172,12 +172,12 @@
             this.label7.TabIndex = 12;
             this.label7.Text = "Data of Last Promotion";
             // 
-            // dateTimePicker1
+            // dateTimePickerlastpromotion
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(230, 152);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(221, 22);
-            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePickerlastpromotion.Location = new System.Drawing.Point(230, 152);
+            this.dateTimePickerlastpromotion.Name = "dateTimePickerlastpromotion";
+            this.dateTimePickerlastpromotion.Size = new System.Drawing.Size(221, 22);
+            this.dateTimePickerlastpromotion.TabIndex = 13;
             // 
             // label8
             // 
@@ -208,13 +208,13 @@
             this.label9.TabIndex = 16;
             this.label9.Text = "Remarks";
             // 
-            // richTextBoxremarks
+            // txtremarks
             // 
-            this.richTextBoxremarks.Location = new System.Drawing.Point(141, 212);
-            this.richTextBoxremarks.Name = "richTextBoxremarks";
-            this.richTextBoxremarks.Size = new System.Drawing.Size(791, 96);
-            this.richTextBoxremarks.TabIndex = 17;
-            this.richTextBoxremarks.Text = "";
+            this.txtremarks.Location = new System.Drawing.Point(141, 212);
+            this.txtremarks.Name = "txtremarks";
+            this.txtremarks.Size = new System.Drawing.Size(791, 96);
+            this.txtremarks.TabIndex = 17;
+            this.txtremarks.Text = "";
             // 
             // button1
             // 
@@ -232,11 +232,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.richTextBoxremarks);
+            this.Controls.Add(this.txtremarks);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.dateTimePickerpakleave);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePickerlastpromotion);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtlastinstitute);
             this.Controls.Add(this.label6);
@@ -276,11 +276,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtlastinstitute;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePickerlastpromotion;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePickerpakleave;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RichTextBox richTextBoxremarks;
+        private System.Windows.Forms.RichTextBox txtremarks;
         private System.Windows.Forms.Button button1;
     }
 }
