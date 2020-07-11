@@ -9,6 +9,7 @@ namespace LGH
 
         public static string vname = "";
         public static string vsdwo = " ";
+        public static string vsdwo_name = "";
         public static string vDOB = "";
         public static string vDateofSuperannuation = " ";
         public static string vsex = " ";
@@ -47,19 +48,20 @@ namespace LGH
             InitializeComponent();
         }
 
-      
+
 
         private void BioData_Load(object sender, EventArgs e)
         {
-          
+
         }
-         
+
 
         private void button2_Click(object sender, EventArgs e)
         {
             //Session for store the Data .
             vname = txtname.Text;
-            vsdwo = txtsdwo.Text;
+            vsdwo = comboBoxsdwo.Text;
+            vsdwo_name = txtsdwo.Text;
             vDOB = dateTimePickerDOB.Text;
             vDateofSuperannuation = dateTimePickerdatesupernnuation.Text;
             vsex = comboboxsex.Text;
@@ -88,9 +90,24 @@ namespace LGH
             vbps = numericUpDownbps.Value.ToString();
 
 
-            //open another bio data form
-            Other_Info_Biodata oib = new Other_Info_Biodata();
-            oib.ShowDialog();
+              //Validation
+              if (txtname.Text == "" || txtsdwo.Text == "" ||
+                txtcnic.Text == "" || txtcellno.Text == "" ||
+                txtemail.Text == "" || txtprc.Text == "" ||
+                txtdomicile.Text == "" || txtpersonalno.Text == "" ||txtaddress.Text=="")
+                
+            {
+                MessageBox.Show("Kindly Fill the Mendatory Feilds ==>(*) ", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+
+            }
+
+            else
+            {
+                //open another bio data form
+                Other_Info_Biodata oib = new Other_Info_Biodata();
+                oib.ShowDialog();
+            }
+
         }
 
 
@@ -98,6 +115,45 @@ namespace LGH
 
 
 
+        private void txtcellno_TextChanged(object sender, EventArgs e)
+        {
 
+            //Textbox Only Accept Numbers
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtcellno.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtcellno.Text = txtcellno.Text.Remove(txtcellno.Text.Length - 1);
+            }
+
+        }
+
+        private void txtcnic_TextChanged(object sender, EventArgs e)
+        {
+            //Textbox Only Accept Numbers
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtcnic.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter only numbers.");
+                txtcnic.Text = txtcnic.Text.Remove(txtcnic.Text.Length - 1);
+            }
+        }
+
+        private void txtname_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Character Validation(only Character allowed)
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+
+        }
+
+        private void txtsdwo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Character Validation(only Character allowed)
+            if (Char.IsControl(e.KeyChar) != true && Char.IsNumber(e.KeyChar) == true)
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

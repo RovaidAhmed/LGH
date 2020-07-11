@@ -11,12 +11,12 @@ D:\clients\Lyari General Hospital\LGH\obj\Debug\LGH.MainForm.resources
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.exe.config
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.exe
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.pdb
+D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.BioData.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.login.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.MainForm.resources
+D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.Other_Info_Biodata.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.Properties.Resources.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csproj.GenerateResource.cache
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csproj.CoreCompileInputs.cache
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.exe
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.pdb
-D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.BioData.resources
-D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.Other_Info_Biodata.resources

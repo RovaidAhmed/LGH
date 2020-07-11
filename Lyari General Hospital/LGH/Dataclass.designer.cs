@@ -97,6 +97,8 @@ namespace LGH
 		
 		private string _SDW_O;
 		
+		private string _SDW_O_Name;
+		
 		private System.DateTime _DOB;
 		
 		private System.DateTime _Date_of_Superannuation;
@@ -181,6 +183,8 @@ namespace LGH
     partial void OnNameChanged();
     partial void OnSDW_OChanging(string value);
     partial void OnSDW_OChanged();
+    partial void OnSDW_O_NameChanging(string value);
+    partial void OnSDW_O_NameChanged();
     partial void OnDOBChanging(System.DateTime value);
     partial void OnDOBChanged();
     partial void OnDate_of_SuperannuationChanging(System.DateTime value);
@@ -302,7 +306,7 @@ namespace LGH
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDW_O", DbType="NChar(100) NOT NULL", CanBeNull=false)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDW_O", DbType="NChar(50) NOT NULL", CanBeNull=false)]
 		public string SDW_O
 		{
 			get
@@ -318,6 +322,26 @@ namespace LGH
 					this._SDW_O = value;
 					this.SendPropertyChanged("SDW_O");
 					this.OnSDW_OChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SDW_O_Name", DbType="NVarChar(80) NOT NULL", CanBeNull=false)]
+		public string SDW_O_Name
+		{
+			get
+			{
+				return this._SDW_O_Name;
+			}
+			set
+			{
+				if ((this._SDW_O_Name != value))
+				{
+					this.OnSDW_O_NameChanging(value);
+					this.SendPropertyChanging();
+					this._SDW_O_Name = value;
+					this.SendPropertyChanged("SDW_O_Name");
+					this.OnSDW_O_NameChanged();
 				}
 			}
 		}

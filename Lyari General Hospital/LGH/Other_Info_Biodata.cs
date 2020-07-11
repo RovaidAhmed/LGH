@@ -43,6 +43,7 @@ namespace LGH
 
                     Name = BioData.vname,
                     SDW_O = BioData.vsdwo,
+                    SDW_O_Name = BioData.vsdwo_name,
                     DOB = Convert.ToDateTime(BioData.vDOB),
                     Date_of_Superannuation = Convert.ToDateTime(BioData.vDateofSuperannuation),
                     Sex = BioData.vsex,
