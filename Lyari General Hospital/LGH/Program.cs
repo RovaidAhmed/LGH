@@ -16,7 +16,7 @@ namespace LGH
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BioData());
+            Application.Run(new MainForm());
         }
     }
 }

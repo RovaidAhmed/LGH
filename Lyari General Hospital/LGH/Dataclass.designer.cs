@@ -33,6 +33,12 @@ namespace LGH
     partial void InsertBio_Data_Form(Bio_Data_Form instance);
     partial void UpdateBio_Data_Form(Bio_Data_Form instance);
     partial void DeleteBio_Data_Form(Bio_Data_Form instance);
+    partial void InsertDesignation(Designation instance);
+    partial void UpdateDesignation(Designation instance);
+    partial void DeleteDesignation(Designation instance);
+    partial void InsertPost(Post instance);
+    partial void UpdatePost(Post instance);
+    partial void DeletePost(Post instance);
     partial void InsertUser(User instance);
     partial void UpdateUser(User instance);
     partial void DeleteUser(User instance);
@@ -73,6 +79,22 @@ namespace LGH
 			get
 			{
 				return this.GetTable<Bio_Data_Form>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Designation> Designations
+		{
+			get
+			{
+				return this.GetTable<Designation>();
+			}
+		}
+		
+		public System.Data.Linq.Table<Post> Posts
+		{
+			get
+			{
+				return this.GetTable<Post>();
 			}
 		}
 		
@@ -1082,6 +1104,391 @@ namespace LGH
 					this._Remarks = value;
 					this.SendPropertyChanged("Remarks");
 					this.OnRemarksChanged();
+				}
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Designation")]
+	public partial class Designation : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Designation_ID;
+		
+		private string _Designation_Name;
+		
+		private System.Nullable<System.DateTime> _Inserted_on;
+		
+		private EntitySet<Post> _Posts;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnDesignation_IDChanging(int value);
+    partial void OnDesignation_IDChanged();
+    partial void OnDesignation_NameChanging(string value);
+    partial void OnDesignation_NameChanged();
+    partial void OnInserted_onChanging(System.Nullable<System.DateTime> value);
+    partial void OnInserted_onChanged();
+    #endregion
+		
+		public Designation()
+		{
+			this._Posts = new EntitySet<Post>(new Action<Post>(this.attach_Posts), new Action<Post>(this.detach_Posts));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation_ID", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Designation_ID
+		{
+			get
+			{
+				return this._Designation_ID;
+			}
+			set
+			{
+				if ((this._Designation_ID != value))
+				{
+					this.OnDesignation_IDChanging(value);
+					this.SendPropertyChanging();
+					this._Designation_ID = value;
+					this.SendPropertyChanged("Designation_ID");
+					this.OnDesignation_IDChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation_Name", DbType="NVarChar(100) NOT NULL", CanBeNull=false)]
+		public string Designation_Name
+		{
+			get
+			{
+				return this._Designation_Name;
+			}
+			set
+			{
+				if ((this._Designation_Name != value))
+				{
+					this.OnDesignation_NameChanging(value);
+					this.SendPropertyChanging();
+					this._Designation_Name = value;
+					this.SendPropertyChanged("Designation_Name");
+					this.OnDesignation_NameChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Inserted_on", DbType="Date")]
+		public System.Nullable<System.DateTime> Inserted_on
+		{
+			get
+			{
+				return this._Inserted_on;
+			}
+			set
+			{
+				if ((this._Inserted_on != value))
+				{
+					this.OnInserted_onChanging(value);
+					this.SendPropertyChanging();
+					this._Inserted_on = value;
+					this.SendPropertyChanged("Inserted_on");
+					this.OnInserted_onChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Designation_Post", Storage="_Posts", ThisKey="Designation_ID", OtherKey="Designation_id")]
+		public EntitySet<Post> Posts
+		{
+			get
+			{
+				return this._Posts;
+			}
+			set
+			{
+				this._Posts.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Designation = this;
+		}
+		
+		private void detach_Posts(Post entity)
+		{
+			this.SendPropertyChanging();
+			entity.Designation = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.Posts")]
+	public partial class Post : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private int _Post_id;
+		
+		private int _Designation_id;
+		
+		private int _Sectioned_post;
+		
+		private System.Nullable<int> _Filled_post;
+		
+		private System.Nullable<int> _Vacant_post;
+		
+		private System.Nullable<System.DateTime> _Inserted_On;
+		
+		private System.Nullable<System.DateTime> _Edited_On;
+		
+		private EntityRef<Designation> _Designation;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnPost_idChanging(int value);
+    partial void OnPost_idChanged();
+    partial void OnDesignation_idChanging(int value);
+    partial void OnDesignation_idChanged();
+    partial void OnSectioned_postChanging(int value);
+    partial void OnSectioned_postChanged();
+    partial void OnFilled_postChanging(System.Nullable<int> value);
+    partial void OnFilled_postChanged();
+    partial void OnVacant_postChanging(System.Nullable<int> value);
+    partial void OnVacant_postChanged();
+    partial void OnInserted_OnChanging(System.Nullable<System.DateTime> value);
+    partial void OnInserted_OnChanged();
+    partial void OnEdited_OnChanging(System.Nullable<System.DateTime> value);
+    partial void OnEdited_OnChanged();
+    #endregion
+		
+		public Post()
+		{
+			this._Designation = default(EntityRef<Designation>);
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Post_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		public int Post_id
+		{
+			get
+			{
+				return this._Post_id;
+			}
+			set
+			{
+				if ((this._Post_id != value))
+				{
+					this.OnPost_idChanging(value);
+					this.SendPropertyChanging();
+					this._Post_id = value;
+					this.SendPropertyChanged("Post_id");
+					this.OnPost_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Designation_id", DbType="Int NOT NULL")]
+		public int Designation_id
+		{
+			get
+			{
+				return this._Designation_id;
+			}
+			set
+			{
+				if ((this._Designation_id != value))
+				{
+					if (this._Designation.HasLoadedOrAssignedValue)
+					{
+						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
+					}
+					this.OnDesignation_idChanging(value);
+					this.SendPropertyChanging();
+					this._Designation_id = value;
+					this.SendPropertyChanged("Designation_id");
+					this.OnDesignation_idChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sectioned_post", DbType="Int NOT NULL")]
+		public int Sectioned_post
+		{
+			get
+			{
+				return this._Sectioned_post;
+			}
+			set
+			{
+				if ((this._Sectioned_post != value))
+				{
+					this.OnSectioned_postChanging(value);
+					this.SendPropertyChanging();
+					this._Sectioned_post = value;
+					this.SendPropertyChanged("Sectioned_post");
+					this.OnSectioned_postChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Filled_post", DbType="Int")]
+		public System.Nullable<int> Filled_post
+		{
+			get
+			{
+				return this._Filled_post;
+			}
+			set
+			{
+				if ((this._Filled_post != value))
+				{
+					this.OnFilled_postChanging(value);
+					this.SendPropertyChanging();
+					this._Filled_post = value;
+					this.SendPropertyChanged("Filled_post");
+					this.OnFilled_postChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Vacant_post", DbType="Int")]
+		public System.Nullable<int> Vacant_post
+		{
+			get
+			{
+				return this._Vacant_post;
+			}
+			set
+			{
+				if ((this._Vacant_post != value))
+				{
+					this.OnVacant_postChanging(value);
+					this.SendPropertyChanging();
+					this._Vacant_post = value;
+					this.SendPropertyChanged("Vacant_post");
+					this.OnVacant_postChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Inserted_On", DbType="Date")]
+		public System.Nullable<System.DateTime> Inserted_On
+		{
+			get
+			{
+				return this._Inserted_On;
+			}
+			set
+			{
+				if ((this._Inserted_On != value))
+				{
+					this.OnInserted_OnChanging(value);
+					this.SendPropertyChanging();
+					this._Inserted_On = value;
+					this.SendPropertyChanged("Inserted_On");
+					this.OnInserted_OnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Edited_On", DbType="Date")]
+		public System.Nullable<System.DateTime> Edited_On
+		{
+			get
+			{
+				return this._Edited_On;
+			}
+			set
+			{
+				if ((this._Edited_On != value))
+				{
+					this.OnEdited_OnChanging(value);
+					this.SendPropertyChanging();
+					this._Edited_On = value;
+					this.SendPropertyChanged("Edited_On");
+					this.OnEdited_OnChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Designation_Post", Storage="_Designation", ThisKey="Designation_id", OtherKey="Designation_ID", IsForeignKey=true)]
+		public Designation Designation
+		{
+			get
+			{
+				return this._Designation.Entity;
+			}
+			set
+			{
+				Designation previousValue = this._Designation.Entity;
+				if (((previousValue != value) 
+							|| (this._Designation.HasLoadedOrAssignedValue == false)))
+				{
+					this.SendPropertyChanging();
+					if ((previousValue != null))
+					{
+						this._Designation.Entity = null;
+						previousValue.Posts.Remove(this);
+					}
+					this._Designation.Entity = value;
+					if ((value != null))
+					{
+						value.Posts.Add(this);
+						this._Designation_id = value.Designation_ID;
+					}
+					else
+					{
+						this._Designation_id = default(int);
+					}
+					this.SendPropertyChanged("Designation");
 				}
 			}
 		}

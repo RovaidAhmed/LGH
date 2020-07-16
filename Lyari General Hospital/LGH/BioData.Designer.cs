@@ -83,15 +83,20 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtvacantpost = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.txtdesignation = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.comboBoxcadre = new System.Windows.Forms.ComboBox();
             this.label23 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePickerdatesupernnuation = new System.Windows.Forms.DateTimePicker();
-            this.numericUpDownbps = new System.Windows.Forms.NumericUpDown();
             this.comboBoxsdwo = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownbps)).BeginInit();
+            this.comboBoxbps = new System.Windows.Forms.ComboBox();
+            this.txtpostedlghkonother = new System.Windows.Forms.TextBox();
+            this.comboBoxdesignation = new System.Windows.Forms.ComboBox();
+            this.designationBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lGHDataSet = new LGH.LGHDataSet();
+            this.designationTableAdapter = new LGH.LGHDataSetTableAdapters.DesignationTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.designationBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lGHDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,7 +136,7 @@
             this.txtname.Location = new System.Drawing.Point(88, 106);
             this.txtname.Name = "txtname";
             this.txtname.Size = new System.Drawing.Size(233, 22);
-            this.txtname.TabIndex = 3;
+            this.txtname.TabIndex = 1;
             this.txtname.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtname_KeyPress);
             // 
             // lblsdw
@@ -150,7 +155,7 @@
             this.txtsdwo.Location = new System.Drawing.Point(492, 106);
             this.txtsdwo.Name = "txtsdwo";
             this.txtsdwo.Size = new System.Drawing.Size(206, 22);
-            this.txtsdwo.TabIndex = 5;
+            this.txtsdwo.TabIndex = 3;
             this.txtsdwo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtsdwo_KeyPress);
             // 
             // lbldob
@@ -168,7 +173,7 @@
             this.dateTimePickerDOB.Location = new System.Drawing.Point(773, 105);
             this.dateTimePickerDOB.Name = "dateTimePickerDOB";
             this.dateTimePickerDOB.Size = new System.Drawing.Size(190, 20);
-            this.dateTimePickerDOB.TabIndex = 7;
+            this.dateTimePickerDOB.TabIndex = 4;
             // 
             // lbldateofsuperannuation
             // 
@@ -526,7 +531,7 @@
             "Other"});
             this.comboBoxpostedlghkon.Location = new System.Drawing.Point(582, 443);
             this.comboBoxpostedlghkon.Name = "comboBoxpostedlghkon";
-            this.comboBoxpostedlghkon.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxpostedlghkon.Size = new System.Drawing.Size(100, 24);
             this.comboBoxpostedlghkon.TabIndex = 47;
             // 
             // label18
@@ -601,14 +606,6 @@
             this.label21.TabIndex = 54;
             this.label21.Text = "Designation";
             // 
-            // txtdesignation
-            // 
-            this.txtdesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtdesignation.Location = new System.Drawing.Point(159, 544);
-            this.txtdesignation.Name = "txtdesignation";
-            this.txtdesignation.Size = new System.Drawing.Size(161, 22);
-            this.txtdesignation.TabIndex = 55;
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
@@ -625,7 +622,11 @@
             this.comboBoxcadre.FormattingEnabled = true;
             this.comboBoxcadre.Items.AddRange(new object[] {
             "General",
-            "Specialist"});
+            "Specialist",
+            "Dental",
+            "Paramedical Staff",
+            "Supporting Staff",
+            "Genetorial Staff"});
             this.comboBoxcadre.Location = new System.Drawing.Point(813, 504);
             this.comboBoxcadre.Name = "comboBoxcadre";
             this.comboBoxcadre.Size = new System.Drawing.Size(121, 24);
@@ -635,7 +636,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(748, 447);
+            this.label23.Location = new System.Drawing.Point(824, 447);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(38, 16);
             this.label23.TabIndex = 58;
@@ -658,13 +659,6 @@
             this.dateTimePickerdatesupernnuation.Size = new System.Drawing.Size(190, 20);
             this.dateTimePickerdatesupernnuation.TabIndex = 62;
             // 
-            // numericUpDownbps
-            // 
-            this.numericUpDownbps.Location = new System.Drawing.Point(813, 443);
-            this.numericUpDownbps.Name = "numericUpDownbps";
-            this.numericUpDownbps.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDownbps.TabIndex = 63;
-            // 
             // comboBoxsdwo
             // 
             this.comboBoxsdwo.FormattingEnabled = true;
@@ -675,7 +669,73 @@
             this.comboBoxsdwo.Location = new System.Drawing.Point(439, 106);
             this.comboBoxsdwo.Name = "comboBoxsdwo";
             this.comboBoxsdwo.Size = new System.Drawing.Size(47, 21);
-            this.comboBoxsdwo.TabIndex = 64;
+            this.comboBoxsdwo.TabIndex = 2;
+            // 
+            // comboBoxbps
+            // 
+            this.comboBoxbps.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxbps.FormattingEnabled = true;
+            this.comboBoxbps.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21"});
+            this.comboBoxbps.Location = new System.Drawing.Point(876, 444);
+            this.comboBoxbps.Name = "comboBoxbps";
+            this.comboBoxbps.Size = new System.Drawing.Size(68, 24);
+            this.comboBoxbps.TabIndex = 65;
+            // 
+            // txtpostedlghkonother
+            // 
+            this.txtpostedlghkonother.Location = new System.Drawing.Point(688, 443);
+            this.txtpostedlghkonother.Name = "txtpostedlghkonother";
+            this.txtpostedlghkonother.Size = new System.Drawing.Size(100, 20);
+            this.txtpostedlghkonother.TabIndex = 66;
+            // 
+            // comboBoxdesignation
+            // 
+            this.comboBoxdesignation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.comboBoxdesignation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.comboBoxdesignation.DataSource = this.designationBindingSource;
+            this.comboBoxdesignation.DisplayMember = "Designation_Name";
+            this.comboBoxdesignation.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxdesignation.FormattingEnabled = true;
+            this.comboBoxdesignation.Location = new System.Drawing.Point(160, 545);
+            this.comboBoxdesignation.Name = "comboBoxdesignation";
+            this.comboBoxdesignation.Size = new System.Drawing.Size(161, 24);
+            this.comboBoxdesignation.TabIndex = 67;
+            this.comboBoxdesignation.ValueMember = "Designation_ID";
+            // 
+            // designationBindingSource
+            // 
+            this.designationBindingSource.DataMember = "Designation";
+            this.designationBindingSource.DataSource = this.lGHDataSet;
+            // 
+            // lGHDataSet
+            // 
+            this.lGHDataSet.DataSetName = "LGHDataSet";
+            this.lGHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // designationTableAdapter
+            // 
+            this.designationTableAdapter.ClearBeforeFill = true;
             // 
             // BioData
             // 
@@ -683,14 +743,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(975, 749);
+            this.Controls.Add(this.comboBoxdesignation);
+            this.Controls.Add(this.txtpostedlghkonother);
+            this.Controls.Add(this.comboBoxbps);
             this.Controls.Add(this.comboBoxsdwo);
-            this.Controls.Add(this.numericUpDownbps);
             this.Controls.Add(this.dateTimePickerdatesupernnuation);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.comboBoxcadre);
             this.Controls.Add(this.label22);
-            this.Controls.Add(this.txtdesignation);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.txtvacantpost);
             this.Controls.Add(this.label20);
@@ -745,8 +806,10 @@
             this.Controls.Add(this.label1);
             this.Name = "BioData";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "  ";
             this.Load += new System.EventHandler(this.BioData_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownbps)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.designationBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lGHDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -808,13 +871,17 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtvacantpost;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox txtdesignation;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.ComboBox comboBoxcadre;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DateTimePicker dateTimePickerdatesupernnuation;
-        private System.Windows.Forms.NumericUpDown numericUpDownbps;
         private System.Windows.Forms.ComboBox comboBoxsdwo;
+        private System.Windows.Forms.ComboBox comboBoxbps;
+        private System.Windows.Forms.TextBox txtpostedlghkonother;
+        private System.Windows.Forms.ComboBox comboBoxdesignation;
+        private LGHDataSet lGHDataSet;
+        private System.Windows.Forms.BindingSource designationBindingSource;
+        private LGHDataSetTableAdapters.DesignationTableAdapter designationTableAdapter;
     }
 }

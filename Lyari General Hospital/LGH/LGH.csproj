@@ -48,6 +48,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddDesignation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddDesignation.Designer.cs">
+      <DependentUpon>AddDesignation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSectionedpost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSectionedpost.Designer.cs">
+      <DependentUpon>AddSectionedpost.cs</DependentUpon>
+    </Compile>
     <Compile Include="BioData.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +70,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Dataclass.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="LGHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LGHDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="login.cs">
       <SubType>Form</SubType>
@@ -79,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddDesignation.resx">
+      <DependentUpon>AddDesignation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSectionedpost.resx">
+      <DependentUpon>AddSectionedpost.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BioData.resx">
       <DependentUpon>BioData.cs</DependentUpon>
     </EmbeddedResource>
@@ -108,6 +131,17 @@
     </None>
     <None Include="Dataclass.dbml.layout">
       <DependentUpon>Dataclass.dbml</DependentUpon>
+    </None>
+    <None Include="LGHDataSet.xsc">
+      <DependentUpon>LGHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LGHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LGHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LGHDataSet.xss">
+      <DependentUpon>LGHDataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

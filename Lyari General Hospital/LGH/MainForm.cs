@@ -27,5 +27,17 @@ namespace LGH
             BioData bd = new BioData();
             bd.ShowDialog();
         }
+
+        private void newDesignationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddDesignation addesign = new AddDesignation();
+            addesign.ShowDialog();
+        }
+
+        private void sectionedPostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddSectionedpost post = new AddSectionedpost();
+            post.ShowDialog();
+        }
     }
 }

@@ -52,6 +52,14 @@ namespace LGH
 
         private void BioData_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'lGHDataSet.Designation' table. You can move, or remove it, as needed.
+            this.designationTableAdapter.Fill(this.lGHDataSet.Designation);
+
+
+            
+
+
+
 
         }
 
@@ -85,9 +93,10 @@ namespace LGH
             vstatusbeforejoinlghk = comboBoxbeforejoinlghk.Text;
             vpostedatlghkin = txtlghkin.Text;
             vlghkvacantpost = txtvacantpost.Text;
-            vdesignation = txtdesignation.Text;
+            vdesignation = comboBoxdesignation.Text;
             vcadre = comboBoxcadre.Text;
-            vbps = numericUpDownbps.Value.ToString();
+            //  vbps = numericUpDownbps.Value.ToString();
+            vbps = comboBoxbps.Text;
 
 
               //Validation
@@ -155,5 +164,7 @@ namespace LGH
                 e.Handled = true;
             }
         }
+
+        
     }
 }

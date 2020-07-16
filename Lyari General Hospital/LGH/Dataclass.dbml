@@ -45,6 +45,26 @@
       <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
     </Type>
   </Table>
+  <Table Name="dbo.Designation" Member="Designations">
+    <Type Name="Designation">
+      <Column Name="Designation_ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Designation_Name" Type="System.String" DbType="NVarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Inserted_on" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Designation_Post" Member="Posts" ThisKey="Designation_ID" OtherKey="Designation_id" Type="Post" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Posts" Member="Posts">
+    <Type Name="Post">
+      <Column Name="Post_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Designation_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Sectioned_post" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Filled_post" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Vacant_post" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Inserted_On" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Edited_On" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Association Name="Designation_Post" Member="Designation" ThisKey="Designation_id" OtherKey="Designation_ID" Type="Designation" IsForeignKey="true" />
+    </Type>
+  </Table>
   <Table Name="dbo.Users" Member="Users">
     <Type Name="User">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />

@@ -11,6 +11,7 @@ D:\clients\Lyari General Hospital\LGH\obj\Debug\LGH.MainForm.resources
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.exe.config
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.exe
 D:\clients\LGH\Lyari General Hospital\LGH\bin\Debug\LGH.pdb
+D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.AddDesignation.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.BioData.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.login.resources
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.MainForm.resources
@@ -20,3 +21,4 @@ D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csproj.GenerateResource.
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.csproj.CoreCompileInputs.cache
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.exe
 D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.pdb
+D:\clients\LGH\Lyari General Hospital\LGH\obj\Debug\LGH.AddSectionedpost.resources
