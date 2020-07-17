@@ -22,7 +22,7 @@ namespace LGH
 
         private void btndesignationadd_Click(object sender, EventArgs e)
         {
-          
+
 
             if (txtdesignation.Text == "")
             {
@@ -32,8 +32,9 @@ namespace LGH
             else
             {
                 var check = from c in dv.Designations
-                                where 
-                             c.Designation_Name.Contains(txtdesignation.Text)
+                            where
+                         c.Designation_Name.Contains(txtdesignation.Text)
+                        
                             select c;
 
                 if (check.Any())

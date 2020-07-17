@@ -256,9 +256,9 @@
             this.lblcnic.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblcnic.Location = new System.Drawing.Point(338, 190);
             this.lblcnic.Name = "lblcnic";
-            this.lblcnic.Size = new System.Drawing.Size(56, 16);
+            this.lblcnic.Size = new System.Drawing.Size(61, 16);
             this.lblcnic.TabIndex = 16;
-            this.lblcnic.Text = "Cnic# *";
+            this.lblcnic.Text = "CNIC# *";
             // 
             // txtcnic
             // 
